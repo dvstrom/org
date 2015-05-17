@@ -1,0 +1,80 @@
+* 快捷键
+** emacs                                                                        :@keybinding:
+*** evil
++ 列操作
+ c+v 可视化模式，shift + i 插入要插入的字符,esc结果出来
+*** emacs
+   c-h v 查看变量的值
+   c-x c-e or c-j 执行SCRATCH里的命令
+   alt+o switch windows
+   c-c j s  toggle the sr-speedbar
+   c-c j r  刷新speedbar
+*** org
++ c-c a a  查看日程
++ c-c [ \] 文件移入/移除日程管理
++ c-c c-s 任务起始时间
++ c-c c-d 任务截止时间
++ c-c . or c-c < 输入日期
++ c-c >日历
++ 图片插入 file:     插入链接
++ 插入列表 直接输入表头“|Name|Pone|Age”后，c-c ret生成表格 c-c c-c 自动对齐表格
++ tag c-c c-q 文本插入tag
++ tag c-c c-c 标题上插入tag
+  
+*** 补全
+   alt+/
+** VI
+*** 屏幕
+ ：splite or new 
+*** 复制
+   可以用emacs 的粘贴c-y后，在用m-y粘贴历史
+
+** terminator                                                                   :@keybinding:
+ Ctrl+Shift+E    垂直分割窗口
+Ctrl+Shift+O    水平分割窗口
+    F11         全屏
+Ctrl+Shift+C    复制
+Ctrl+Shift+V    粘贴
+Ctrl+Shift+N    或者 Ctrl+Tab 在分割的各窗口之间切换
+Ctrl+Shift+X    将分割的某一个窗口放大至全屏使用
+Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
+
+** android studio key-map                                                       :@keybinding:
+   c-o 复写父类方法
+   c-i 复写接口方法
+   c-j 模板
+   c-b 查看声明
+   c-n 快速找类
+   c-q 查看DOC
+** git                                                                          :@keybinding:
+*** 本地
+ + 添加：git add .
+ + 提交：git commit -m
+*** 远程
+ + 添加远程库:git remote add origin git@github.com:michaelliao/learngit.git
+ + 推送： git push -u origin master  (first)
+ + 日常推送: git push origin master 把本地master分支的最新修改推送至GitHub
+* 日程
+* task
+[ ]
+* 机器学习
+** 常用python 语句
+*** 字典、列表排序方法 
+    sortedClassCount = sorted(classCount.iteritems(),\
+                              key = operator.itemgetter(1),reverse = True)
+*** 定义了1个二维数组，
+    returnVect = zeros((1,1024))
+   如果定义一个一维数组则用：zeros(1024)
+* TODO
+** 工作
+*** 授课 
+<2015-03-03 Tue +1w>
+<2015-03-05 Thu +1w>
+
+**** android
+***** 
+
+**** 操作系统
+
+** 家庭
+** 学习

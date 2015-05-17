@@ -1,0 +1,9 @@
+* 朴素贝叶斯
+** 公式
+   \begin{equation}
+   x_1 = 2
+   \end{equation}
+** code
+
+
+   

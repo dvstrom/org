@@ -1,0 +1,49 @@
+;;#+TAGS：{base(b) 快捷键() }
+* 常用python 语句
+*** 字典、列表排序方法 
+    sortedClassCount = sorted(classCount.iteritems(),\
+                              key = operator.itemgetter(1),reverse = True)
+*** 定义了1个二维数组，
+    returnVect = zeros((1,1024))
+   如果定义一个一维数组则用：zeros(1024)
+* 正则表达式
+** 基本
+*** 通配符号                                                                    :@problem:
+ + 转义字符\ 和 \\   
+ + . 点号匹配除换行符以外的任何单个字符
+
+*** 字符集
+[]匹配它所包含的任意字符，只能匹配一个这样的字符
+ + [a-z]
+ + [a-zA-Z0-9]
+ +反转字符^[^abc]：匹配任何除了a,b,c以外的字符
+*** 选择符号和子模式
+ + 选择符 | 'python|perl'
+ + 子模式（） p(ython|erl)
+*** 可选项和重复子模式
+**** 可选项：子模式后加?号 
++ example :r'(http://)?(www\.)?python\.org' 匹配:
+  - 'http://www.python.org'
+  - 'http://python.org'
+  - 'www.python.org'
+  - 'python.org'
++ (pattern)*:重复0次或多次
++ (pattern)+:重复1次或多次
++ (pattern){m,n}:重复m~n次 {}跟在模式后表示个数
+
+   
+*** 字符串开始和结尾
+ + ^字符串开始
+ + $字符串结尾
+* re模块
+| 函数                           | 描述                                 |
+| compile(pt[,flags])            | 创建模式对象                         |
+| search(pt,string[,flags])      | 字符串中寻找模式                     |
+| match(pt,string[,flags])       | 开始处寻找模式                       |
+| split(pt,string[,maxsplit=0])  | 分割字符串                           |
+| findall(pt,string)             | 列出所有匹配项                       |
+|--------------------------------+--------------------------------------|
+| sub(pat,repl,string[,count=1]) | 将所有匹配项用repl替换               |
+|--------------------------------+--------------------------------------|
+| escape（string）               | 将字符串中所有特殊正则表达式符号转义 |
+|                               |                                      |

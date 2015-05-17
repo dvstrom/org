@@ -1,0 +1,74 @@
+* android sqlite
+** openhelper
+SQLiteDatabase类本身只是一个数据库的操作类，但是如果要想进行数据库的操作，还需要一个android.database.sqlite.SQLiteOpenHelper类帮助下才可以取得进行，但是，SQLiteOpenHelper类是一个抽象类，所以要使用的时候需要定义其子类，并且在子类中要覆写相应的抽象方法。 
+*** oncreate()
+只有调用了getReadableDatabase()或getWritableDatabase()方法时才会调用getReadableDatabase()或getWritableDatabase()方法时才会调用
+*** onUpgrade()：
+当数据库需要进行升级的时候，会调用此方法，一般可以在此方法之中将数据表删除，并且在删除表之后往往会调用onCreate()方法以重新创建新的数据表； 
+** ContentValues 
++ SQLiteDatabase类之中也专门提供了insert()、update()、delete()、query()等方法，但是在使用这些方法进行数据库
+ 操作的时候，所有的数据必须使用ContentValues类进行封装。 
++ ContentValues的功能与HashMap类的功能类似，都是采用“key=value”的形式保存数据，唯一不同的是在
+  ContentValues类中所设置的key都是String型的数据，而所设置的value都是基本数据类型的包装类。
++ 包装好还是用DATABASE.INSET,DATABASE.UPDATE等进行数据库的操作
+
+*** code 
+    + public void insert(String name, String birthday) {
+	+	SQLiteDatabase db = super.getWritableDatabase(); 	// 取得数据库操作对象
+	+	ContentValues cv = new ContentValues() ;		// 定义ContentValues对象
+	+	cv.put("name", name) ;				// 设置name字段内容
+	+	cv.put("birthday", birthday) ;			// 设置birthday字段内容
+	+	db.insert(TABLENAME, null, cv) ;			// 增加操作
+	+	db.close() ;				// 关闭数据库操作
+	+public void update(int id, String name, String birthday) {
+	+	SQLiteDatabase db = super.getWritableDatabase(); 	// 取得数据库操作对象
+	+	String whereClause = "id=?" ;			// 更新条件
+	+	String whereArgs[] = new String[] {String.valueOf(id)} ; 	// 更新id
+	+	ContentValues cv = new ContentValues() ;		// 定义ContentValues对象
+	+	cv.put("name", name) ;				// 设置name字段内容
+	+	cv.put("birthday", birthday) ;			// 设置birthday字段内容
+	+	db.update(TABLENAME, cv, whereClause, whereArgs) ;	// 更新操作
+	+	db.close() ;				// 关闭数据库操作
+	+}
++	public void delete(int id) {
++		SQLiteDatabase db = super.getWritableDatabase(); 	// 取得数据库操作对象
++		String whereClause = "id=?" ;			// 删除条件
++		String whereArgs[] = new String[] {String.valueOf(id)} ; 	// 删除id
++		db.delete(TABLENAME, whereClause, whereArgs) ;		// 删除操作
++		db.close() ;				// 关闭数据库操作
++	}
++}
+
+** cursor接口
+数据库的操作除了更新之外，还有最复杂的就是数据的检索操作，当android程序需要进行数据检索操作的时候需要保存全部的查询结果，而保存查询结果就可以使用android.database.Cursor接口完成，并且可以完成对结果集随机读写访问的操作。
+*** 操作方法
+要想从前到后依次取得全部数据行的时候，则要使用isAfterLast()、moveToNext()、moveToFirst()三个方法，并且按照如下步骤进行： 
++ 使用moveToFirst()方法将结果集的指针放在第一行数据； 
++ 随后使用isAfterLast()方法判断是否还有数据，如果还有数据，则进行取出； 
++ 再随后利用moveToNext()将指针向下移动，并继续使用isAfterLast()方法判断； 
+*** code 
+     +   Cursor result = helper.find() ;			// 查询全部数据
+     +   String data[] = new String[result.getCount()] ; 	// 根据返回结果开辟数组
+	 +	int foot = 0 ;			// 数组下标
+	 +	for (result.moveToFirst(); !result.isAfterLast(); result.moveToNext()) {
+	 +		data[foot++] = "【" + result.getInt(0) + "】" + " "
+	 +				+ result.getString(1) + "，" + result.getString(2);
+	 +	}
+* android service   
+** 常见函数
+  | 函数            | 类型 | 描述                        |
+  |-----------------+------+-----------------------------|
+  | startService    | 普通 | 启动service                 |
+  | stopService     | 普通 | 停止service                 |
+  | bindService     | ...  | 与一个service绑定           |
+  | unbindService   | ...  | 解除绑定                    |
+  | IBunder  onBind | ...  | 设置service和activity的绑定 |
+  | onCreate        | ...  | 当service创建时被调用       |
+  | onStartCommand  | ...  | 由startService触发          |
+  | onDestroy       | ...  | 销毁时用,由stopService触发  | 
+
+** 注册
+  <application>节点下添加如下的代码： <service android:name=".MyServiceUtil" /> 
+
+  
+
