@@ -50,6 +50,10 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
 *** 本地
  + 添加：git add .
  + 提交：git commit -m
+ + 撤销修改 : git checkout -- readme.txt 我的理解就是把工作区的文件用暂存区的内容覆盖
+ + 查看记录 : git log or git log --pretty=oneline 后一个可看到commit id
+ + 回退： git reset --hard HEAD^ 回退上一个版本，上上版本 HEAD^^，太多可以写作：HEAD~100
+ + 记录每次命令的: git reflog
 *** 远程
  + 添加远程库:git remote add origin git@github.com:michaelliao/learngit.git
  + 推送： git push -u origin master  (first)
