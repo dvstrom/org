@@ -49,6 +49,9 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
 ** git                                                                          :@keybinding:
 *** 本地
  + 添加：git add .
+ + 忽略某些文件，则新建.gitignore文件，将不git的文件添加进来，对目录则用如：doc/表示
+ + 添加：git add -u 把<path>中所有tracked文件中被修改过或已删除文件的信息添加到索引库。它不会处理untracted的文件。
+ + 添加: git add -i命令查看<path>中被所有修改过或已删除文件但没有提交的文件
  + 提交：git commit -m
  + 撤销修改 : git checkout -- readme.txt 我的理解就是把工作区的文件用暂存区的内容覆盖
  + 查看记录 : git log or git log --pretty=oneline 后一个可看到commit id
