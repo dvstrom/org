@@ -58,6 +58,14 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
  + 添加远程库:git remote add origin git@github.com:michaelliao/learngit.git
  + 推送： git push -u origin master  (first)
  + 日常推送: git push origin master 把本地master分支的最新修改推送至GitHub
+ + 远程科隆 ：git clone git@github.com:michaelliao/gitskills.git
+*** 分支 :
+ + 创建分支 : git branch branchname
+ + 切换分支 : git checkout branchname (相当于把HEAD指针指向新分支)
+ + 上两条命令等价于一条命令: git checkout -b branchname
+ + 查看分支 :git branch
+ + 合并分支: 切换回主分支后,git merge branchname
+ + 删除分支 :git branch -d branchname 
 * 日程
 * task
 [ ]
