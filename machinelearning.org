@@ -4,6 +4,9 @@
    x_1 = 2
    \end{equation}
 ** code
+* logistic回归与sigmoid函数
+** resource
+  http://blog.csdn.net/lu597203933/article/details/38468303
 
 
    
