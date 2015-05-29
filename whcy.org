@@ -20,6 +20,7 @@
 + 插入列表 直接输入表头“|Name|Pone|Age”后，c-c ret生成表格 c-c c-c 自动对齐表格
 + tag c-c c-q 文本插入tag
 + tag c-c c-c 标题上插入tag
++ c-c c-e 导出
   
 *** 补全
    alt+/
