@@ -21,7 +21,14 @@
 + tag c-c c-q 文本插入tag
 + tag c-c c-c 标题上插入tag
 + c-c c-e 导出
-  
++  #+SEQ_TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+   #+SEQ_TODO: TODO(T!) | DONE(D@)3  CANCELED(C@/!) 
+    - 字符：该状态的快捷键
+    - ！：切换到该状态时会自动增加时间戳
+    - @ ：切换到该状态时要求输入文字说明
+    - 如果同时设定@和！，使用“@/!”
+
+用“|”分隔未完成状态和已完成状态。未完成状态在查询待办事项时会列出。 
 *** 补全
    alt+/
 ** VI
@@ -71,7 +78,32 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
  + 查看分支 :git branch
  + 合并分支: 切换回主分支后,git merge branchname
  + 删除分支 :git branch -d branchname 
-* 日程
+* TODO 日程
+** odoo 
+*** TODO 会计管理
+    - State "TODO"       from "STARTED"    [2015-06-18 Thu 08:40]
+    - State "STARTED"    from "DONE"       [2015-06-18 Thu 08:40]
+    - State "DONE"       from "WAITING"    [2015-06-18 Thu 08:40]
+    - State "DONE"       from "WAITING"    [2015-06-18 Thu 08:39]
+    - State "DONE"       from "STARTED"    [2015-06-16 Tue 11:25]
+    - State "TODO"       from "STARTED"    [2015-06-16 Tue 11:25]
+    - State "STARTED"    from "DONE"       [2015-06-16 Tue 11:14]
+    - State "DONE"       from "STARTED"    [2015-06-16 Tue 11:14]
+    - State "TODO"       from "WAITING"    [2015-06-16 Tue 11:13]
+    - State "TODO"       from ""           [2015-06-16 Tue 09:56]
+*** DONE 产品属性管理（看视频） 
+    CLOSED: [2015-06-17 Wed 08:30]
+    - State "DONE"       from ""           [2015-06-17 Wed 08:30]
+*** TODO 观看开发视频
+    - State "TODO"       from ""           [2015-06-18 Thu 08:33]
+*** TODO 配置好开发环境
+    - State "TODO"       from ""           [2015-06-18 Thu 08:38]
+** machinglearning
+*** adaboost
+**** DONE 马群预测 
+     CLOSED: [2015-06-18 Thu 08:38]
+     - State "DONE"       from "STARTED"    [2015-06-18 Thu 08:38]
+     - State "TODO"       from ""           [2015-06-17 Wed 08:31]
 * task
 [ ]
 * 机器学习
@@ -82,12 +114,16 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
 *** 定义了1个二维数组，
     returnVect = zeros((1,1024))
    如果定义一个一维数组则用：zeros(1024)
-* TODO
+* 工作
 ** 工作
 *** 授课 
 <2015-03-03 Tue +1w>
 <2015-03-05 Thu +1w>
-
+*** 杂项
+**** TODO 杨院长的两访两创活动
+     DEADLINE: <2015-06-18 Thu>
+     - State "TODO"       from ""           [2015-06-18 Thu 08:34]
+       
 **** android
 ***** 
 
