@@ -1,9 +1,13 @@
 * 快捷键
 ** emacs                                                                        :@keybinding:
 *** evil
-+ 列操作
+ + 列操作
  c+v 可视化模式，shift + i 插入要插入的字符,esc结果出来
-*** emacs
+ $ 选中的列直接扩至行尾，按> or < 左右移动
+ + 1 m 2 把第一行换到2行下面
+  1, 10 m 20 将第1-10行移动到第20行之
++ n1,n2s/old/new n1到n2行里用new换old
+***  emacs
    c-h v 查看变量的值
    c-x c-e or c-j 执行SCRATCH里的命令
    alt+o switch windows
@@ -27,11 +31,13 @@
     - ！：切换到该状态时会自动增加时间戳
     - @ ：切换到该状态时要求输入文字说明
     - 如果同时设定@和！，使用“@/!”
++ 插入todo c-c c-t
 
 用“|”分隔未完成状态和已完成状态。未完成状态在查询待办事项时会列出。 
 + c-c a t 全局todo列表
 *** 补全
    alt+/
+*** 状态切换:c+z 可以让minibuffer上有eval
 ** VI
 *** 屏幕
  ：splite or new 
@@ -98,8 +104,18 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
 *** TODO 观看开发视频
     - State "TODO"       from ""           [2015-06-18 Thu 08:33]
 *** TODO 配置好开发环境
-    - State "TODO"       from ""           [2015-06-18 Thu 08:38]
-** machinglearning
+*** TODO 看界面开发视频 优酷上
+SCHEDULED: <2015-07-22 三>
+*** TODO 会计管理内容
+SCHEDULED: <2015-07-23 四>
+**** 数据导入导出
+**** 工资发放
+*** TODO 生产成本核算
+DEADLINE: <2015-07-24 五> SCHEDULED: <2015-07-23 四>
+** 英语
+*** TODO 背单词 <2015-07-24 五 +1d>
+
+* machinglearning
 *** adaboost
 **** DONE 马群预测 
      CLOSED: [2015-06-18 Thu 08:38]
