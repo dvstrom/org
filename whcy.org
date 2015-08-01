@@ -1,3 +1,4 @@
+#+TAGS:
 * 快捷键
 ** emacs                                                                        :@keybinding:
 *** evil
@@ -24,20 +25,39 @@
 + 插入列表 直接输入表头“|Name|Pone|Age”后，c-c ret生成表格 c-c c-c 自动对齐表格
 + tag c-c c-q 文本插入tag
 + tag c-c c-c 标题上插入tag
++ 搜索tag c-c \ c-c / m
 + c-c c-e 导出
-+  #+SEQ_TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
-   #+SEQ_TODO: TODO(T!) | DONE(D@)3  CANCELED(C@/!) 
-    - 字符：该状态的快捷键
-    - ！：切换到该状态时会自动增加时间戳
-    - @ ：切换到该状态时要求输入文字说明
-    - 如果同时设定@和！，使用“@/!”
++ #+SEQ_TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+  #+SEQ_TODO: TODO(T!) | DONE(D@)3  CANCELED(C@/!) 
+  - 字符：该状态的快捷键
+  - ！：切换到该状态时会自动增加时间戳
+  - @ ：切换到该状态时要求输入文字说明
+  - 如果同时设定@和！，使用“@/!”
 + 插入todo c-c c-t
 
 用“|”分隔未完成状态和已完成状态。未完成状态在查询待办事项时会列出。 
 + c-c a t 全局todo列表
++ 用复选框标记非标题类型的子任务
+
+前面的任务和子任务都是标题形式。Org-mode还支持非标题形式的子任务。对于以”[ ]“开头的列表， 会被当作复选框。这样就形成了局部的子任务， 适用于将一个任务划分成几个简单的步骤。 下面是一个例子：
+
+**** 一个任务 [0/2]
+该任务包含几个步骤：
+- [-] 步骤1 [1/2]
+  - [X] 步骤1.1
+  - [ ] 步骤1.2
+- [-] 步骤2 [1/2]
+  - [X] 步骤2.1
+  - [ ] 步骤2.2
+
+与子任务类似，步骤的状态变化会改变上级步骤/任务的完成情况。 下面是复选框相关的命令：
+  KEYS	COMMENT
+C-c C-c 	改变复选框状态
+M-S-RET 	增加一个子项
 *** 补全
    alt+/
 *** 状态切换:c+z 可以让minibuffer上有eval
+*** m-q 段落重排
 ** VI
 *** 屏幕
  ：splite or new 
@@ -109,31 +129,61 @@ CLOSED: [2015-07-22 三 14:51]
 CLOSED: [2015-07-22 三 14:51]
 *** DONE 看界面开发视频 优酷上
 CLOSED: [2015-07-22 三 20:42] DEADLINE: <2015-07-22 三> SCHEDULED: <2015-07-22 三>
-*** TODO 会计管理内容
-SCHEDULED: <2015-07-25 六>
+*** DONE 会计管理内容
+CLOSED: [2015-07-26 日 21:51] SCHEDULED: <2015-07-25 六>
 **** 数据导入导出
 **** 工资发放
 *** TODO 生产成本核算
 DEADLINE: <2015-07-24 五> SCHEDULED: <2015-07-23 四>
 *** TODO 安装客户端
-*** TODO 库存和生产文档阅读
-SCHEDULED: <2015-07-23 四>
- [[file:~/下载/OpenERPWMS.pdf][odoo仓库管理的英文文档]]
-[[http://shine-it.net/index.php/topic,2425.msg8078.html][openerp仓库基本概念]]
-[[http://shine-it.net/index.php?topic=16496.0][Odoo8仓库管理（WMS）介绍]]
-[[http://blog.csdn.net/wangnan537/article/details/41335359][Odoo(OpenERP)补货规则笔记整理 - 草稿 ]]
-[[http://www.osbzr.com/help.php?page=mrp][生产]]
-*** TODO 看开发教程 
-SCHEDULED: <2015-07-24 五>
-http://www.openerp-china.org/index.php?page=developer#Odoo%2528%25E5%2589%258DOpenERP%2529%252C%25E4%25B8%2580%25E4%25B8%25AA%25E4%25BC%2598%25E7%25A7%2580%25E7%259A%2584ERP%25E4%25BA%258C%25E6%25AC%25A1%25E5%25BC%2580%25E5%258F%2591%25E5%25B9%25B3%25E5%258F%25B0
-SCHEDULED: <2015-07-23 四>
-[[file:/home/whcy/下载/精通Odoo.pdf][精通odoo]]
+*** TODO 库存和生产文档阅读  [5/9]                                 :odoo应用:
+SCHEDULED: <2015-07-28 二 +1d>-<2015-07-27 一>
+- State "DONE"       from "TODO"       [2015-07-30 四 21:48]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
+:PROPERTIES:
+:LAST_REPEAT: [2015-07-30 四 21:48]
+:END:
+- [-]读 [[file:~/下载/OpenERPWMS.pdf][odoo仓库管理的英文文档]] [1/3]
+  - [X] 1-10
 
+  - [ ] 10-30
+
+  - [ ] 30-54
+
+   
+
+- [X] [[http://shine-it.net/index.php/topic,2425.msg8078.html][openerp仓库基本概念]]
+- [X] [[http://shine-it.net/index.php?topic=16496.0][Odoo8仓库管理（WMS）介绍]]
+- [X] [[http://blog.csdn.net/wangnan537/article/details/41335359][Odoo(OpenERP)补货规则笔记整理 - 草稿  ]]
+- [X] [[http://www.osbzr.com/help.php?page=mrp][生产]]
+- [ ] [[~/下载/openerp_manufacturing_book.pdf][英文生产手册]]
+- [ ] [[https://doc.odoo.com/book/5/5_15_Manufacturing/5_15_Manufacturing/#finished-product-manufacturing][网上文档生产]]
+- [X] [[http://blog.sina.com.cn/s/blog_7cb52fa80100wr6n.html][用会计的思想来解释ODOO的库存]]
+- [ ] [[http://www.haodaima.net/art/2711002][新odoo不同的地方]]
+- [ ] 有Scheduler的，odoo老文档
+      [[https://doc.odoo.com/v6.1/book/5/5_15_Manufacturing/5_15_Manufacturing_forecasting][关于计划的]] 
+*** TODO 看开发教程                                                :odoo开发:
+**** 
+DEADLINE: <2015-07-30 四> SCHEDULED: <2015-07-24 五 >
+http://www.openerp-china.org/index.php?page=developer#Odoo%2528%25E5%2589%258DOpenERP%2529%252C%25E4%25B8%2580%25E4%25B8%25AA%25E4%25BC%2598%25E7%25A7%2580%25E7%259A%2584ERP%25E4%25BA%258C%25E6%25AC%25A1%25E5%25BC%2580%25E5%258F%2591%25E5%25B9%25B3%25E5%258F%25B0
+SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
+[[file:/home/whcy/下载/精通Odoo.pdf][精通odoo]]
+[[~/下载/OpenERP Server Developers Documentatio中英对照--完整.pdf][开发中英对照]]
+**** frepple可以实现排程,还有APS即Advanced Planning and Scheduling
 ** 英语
-*** TODO 背单词 <2015-07-23 四 +1d>
+*** TODO 背单词 <2015-07-29 三 +1d>
+- State "DONE"       from "TODO"       [2015-07-30 四 21:52]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-26 日 20:59]
+- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
+- State "DONE"       from "TODO"       [2015-07-23 四 19:41]
 - State "DONE"       from "TODO"       [2015-07-22 三 19:55]
 :PROPERTIES:
-:LAST_REPEAT: [2015-07-22 三 19:55]
+:LAST_REPEAT: [2015-07-30 四 21:52]
 :END:
 * machinglearning
 *** adaboost
@@ -144,6 +194,14 @@ SCHEDULED: <2015-07-23 四>
 * task
 ** DONE 下载太极拳24式视频 
 CLOSED: [2015-07-22 三 19:53] DEADLINE: <2015-07-22 三>
+** DONE 搜mpr_jit模块到底装没 
+CLOSED: [2015-07-28 二 14:35] SCHEDULED: <2015-07-25 六> 改名了:procurement_jit
+** DONE 搜搜odoo仓库管理员的设置 <2015-07-29 三> 库位设置里好像有，没有测试
+CLOSED: [2015-07-29 三 21:08]
+** TODO 搞清楚生产计划到底怎么样制定 <2015-07-30 四>  
+** TODO 搜搜odoo中报表怎么做，youtube上已经搞了两个，看看<2015-07-30 四>
+** TODO 看看生产完后的良率咋弄
+**  
 * 机器学习
 ** 常用python 语句
 *** 字典、列表排序方法 
@@ -161,7 +219,152 @@ CLOSED: [2015-07-22 三 19:53] DEADLINE: <2015-07-22 三>
      - State "DONE"       from "TODO"       [2015-06-18 Thu 09:31]
      - State "TODO"       from ""           [2015-06-18 Thu 08:34]
        
+       
+*** odoo                                                             :odoo应用:
+**** 期初库存建立可用盘点库位                              
+**** 物料清单中Manufacturing Efficiency或者product efficiency指的是良品率
+**** Manufacturing中的属性是为选择bOM
+**** 生产成本核算
+a）成本计算方法，产品成本计算方法有，完全成本法、变动成本法和制造成本法。我国企
+业会计准则规定，企业产品成本计算采用制造成本法。制造成本法计算产品和存货成本时，
+成本只包括直接材料、直接工资和制造费用，管理费用、销售费用、财务费用作为期间费用
+处理，在发生期内列入当期损益，作为产品销售利润的扣除。
 
+b）产品成本项目分类，成本成本项目一般分为直接材料费、直接人工费、制造费用。直接
+材料费是产品的直接原材料费用，直接人工费是生产工人的工资、福利等费用，制造费用是
+为组织和管理产品生产而发生的各种费用，包括生产管理人员工资福利、厂房租赁费、设备
+折旧费、维修费、水电煤等。直接材料费和直接人工费直接归集到产品作为产品成本，但制
+造费用是间接成本，不能直接归集到某一个产品。制造费用的成本核算，通常做法是，先按
+费用发生的地点归集，再按一定的方法分摊到各成本计算对象。
+
+c）可变制造费用和固定制造费用，在制造费用中，和产量直接相关的费用，如燃料、电费
+等，叫可变制造费，与产量无关的制造费用，如管理人员工资、房租等，叫固定制造费用。
+
+在OpenERP中，支持生产成本计算的设置在工作中心（Work Center）中。工作中心定义了标
+准人时成本和标准机时成本：
+
+每周期加工数量（Capacity per Cycle）：只改WC每个周期可完成的产品数量。
+
+每周期小时数（Time for 1 cycle (hour)）：该WC运行一个周期需要的时间（小时）。
+
+生产准备时间（Time before prod.）：启动WC开始生产所需要的时间。
+
+生产清理时间（Time after prod.）：WC运行结束需要的清理时间。
+
+小时成本（Cost per hour）：该工作中心每小时的费用，可在此设置直接人工费。
+
+小时成本科目（Hour Account）：工单完工时，系统将算出的小时成本记录到该科目，是成
+本会计科目，可以任意设定。
+
+周期成本（Cost per cycle）：该工作中心运行一个周期的费用，可在此设置可变动制造费
+用。
+
+周期成本科目（Cycle Account）：工单完工时，系统将算出的周期成本记录到该科目，是
+成本会计科目，可以任意设定。
+
+总账科目（General Account）：财务会计科目，通常是“制造费用”科目。
+
+例如，某WC一个周期生产100件，每个周期4小时，每小时成本100元，每周期成本200元。该
+WC上的某工单要求生产1000件产品。则工单完工时，系统自动计算该工单的小时成本为：
+
+1000 / 100 = 10 周期，10 * 4 = 40小时，40 * 100 = 4000元。
+
+自动计算该工单的周期成本为：10 * 200 = 2000元。
+
+一个生产订单通常包含多个工单，系统自动计算并记录每个工单的费用。生产订单完工后，
+成本会计查找系统记录的工单费用、采购或生产出库记录的直接材料费用、分摊的固定制造
+费用等，核算出该订单或该批产品的成本。系统不直接支持产品成本核算，但记录生产中发
+生的基本费用，辅助成本会计成本核算。
+1）Product的提前期
+
+Customer Lead Time（sale_delay）：客户提前期，指SO确认到向客户发货的天数，由于销
+售数量不同该时间也不同，因此，这里是一个平均时间。
+
+Manufacturing Lead Time（produce_delay）：生产提前期，指该产品从生产下单到生产完
+工的天数，由于生产数量不同，该时间也不同，因此，这里是一个平均时间。这个时间必须
+包含其子部件的produce_delay，以及其零部件的采购提前期。OpenERP没有提供根据其BoM
+表及各零件的采购提前期自动计算这个时间的功能。这个时间必须预先计算好，而后恰当设
+置。
+
+Delivery Lead Time(seller_delay)：指该产品采购下单到采购收货的天数，因为不同供应
+商，这个时间不同，因此这个时间是针对供应商而设的。又由于采购数量不同，这个时间也
+不同，因此这个时间是采购数量的一个平均时间。
+
+2）Company的提前期
+
+Scheduler Range Days(schedule_range)：MRP运算的时间范围（天数），MRP运算时候，只
+计算Scheduled date在today + schedule_range之前的Procurement。
+
+Purchase Lead Time（po_lead）：全体采购提前期，该公司的所有产品的采购都加上这个
+天数。
+
+Manufacturing Lead Time（manufacturing_lead）：生产提前期，该公司的所有产品生产
+都加上该天数。
+
+Security Days（security_lead）：销售提前期，该公司的所有产品的销售都加上该天数。
+
+3）SO的时间
+
+Confirmation Date：SO确认时间
+
+Creation Date：SO创建时间
+
+Delivery Lead Time（delay）：这个在每个SO Line上设置，指该产品行从SO确认到向客户
+发货需要的天数，默认值是产品的sale_delay加上公司的security_lead。
+
+4）Procurement Order的时间
+
+Scheduled date(date_planned):产品行预计供应时间。也即产品行预计的收货、发货时间。
+
+如果是SO确认而产生的Procurement，该时间是：SO确认日期 + SO Line上的delay。
+
+5）PO时间
+
+Expected Date（minimum_planned_date）：预计的采购下单时间，默认值是各PO Line上的
+date_planned的最小值，如果修改该值，系统自动修改PO Line上的date_planned，使得所
+有date_planned时间不早于该值。
+
+Date Ordered(date_order)：SO创建时间。
+
+Date Approved（date_approved）：SO确认时间。
+
+Scheduled Date（date_planned）：这个在每个PO Line上设置，预计的采购下单时间。默
+认值是procurement.date_planned - company.po_lead - seller_delay。即产品行预计供
+应时间 - 公司采购提前天数 - 该产品的该供应商的采购提前天数。
+
+6）Picking时间（收、发货单时间）
+
+Expected Date（min_date）：预计的收货、发货时间，该值是Picking Line上的
+date_expected的最小值。
+
+Order Date（date）：Picking创建时间。
+
+Date（date）：这个在Picking Line（stock.move）上设置,指本产品行实际收货、发货
+（库存移动）时间，初始默认值是date_expected。
+
+Scheduled Date（date_expected）：在Picking Line（stock.move）上设置,预计的本产品
+行收货、发货（库存移动）时间。默认值是Procurement.date_planned。
+
+7）Manufacture Order时间
+
+Scheduled date（date_planned）：预计的生产开工时间。默认值是
+Procurement.date_planned - Product.produce_delay - Company.manufacturing_lead。
+如果是MTO产品，默认值是SO确认时间+SO Line上的delay - 产品的生产提前期 - 公司的生
+产提前期。如果是零部件的MO，其值是它的父亲的MO.date_planned - 产品的生产提前期 -
+公司的生产提前期。
+
+Start Date（date_start）：实际的生产开工时间。
+
+End Date（date_end）：实际的生产完工时间。
+****  Odoo中安装website模块后，登录界面找不到"数据库管理"(Manage Databases)链接，可通过此链接进入数据库管理界面:
+http://localhost:8069/web/database/manager PS:数据库选择界面url
+http://localhost:8069/web/database/selector带db信息的登录界面url
+http://localhost:8069/web/login?db=odoo
+**** [[http://fr.slideshare.net/openmrp/fabricac-27781655][ 生产中的价值计算]]
+**** [[https://doc.odoo.com/v6.1/book/5/5_15_Manufacturing/5_15_Manufacturing_forecasting][提供和预期]]
+**** [[http://fr.slideshare.net/alrayon/atlantis-ibim-open-erp-for-production-planning][openerp for production planning]]  这里面的功能有很多找不到
+**** [[https://aasimania.wordpress.com/2015/02/23/manufacturing-order-and-costing-in-openerpodoo/][Manufacturing Order and Costing in OpenERP/Odoo]]
+**** bill of materials 中的rounding是指一个产品最小表示单位，如是一个东西还是半个东西。
 
 ** 家庭
 ** 学习
