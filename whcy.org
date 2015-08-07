@@ -99,6 +99,40 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
  + 日常推送: git push origin master 把本地master分支的最新修改推送至GitHub
  + 远程科隆 ：git clone git@github.com:michaelliao/gitskills.git
  + 远程拉取:git pull origin master
+ + 远程合并更新：clone后：1、git remote add origin  git@github.com:michaelliao/gitskills.git
+                      2、git fetch origin
+                      3、git merge origin/master
+ + git pull 是先fetch 后merge
+   [[http://www.ruanyifeng.com/blog/2014/06/git_remote.html][clone,pull,push,fetch]]
+ + git clone 太慢了 
+        以gerrit-trigger-plugin为例，下面的链接都是从相应页面上直接拷贝的。法一：不用
+        github的账号，打开这个库在github上的主页，运行下面命令即可
+        read only运行命令
+        $git clone https://github.com/jenkinsci/gerrit-trigger-plugin.git
+        下面的三种方法都要先
+        在github上注册账户，然后生成相应的ssh key，并把public key添加到个人账户里面，详
+        见github帮助read+write $git clone
+        git@github.com:flyingbird1221/gerrit-trigger-plugin.git read+write $git clone
+        https://flyingbird1221@github.com/flyingbird1221/gerrit-trigger-plugin.git 会提
+        示输入密码，注意此处的密码不是你在github上账户的密码，而是当前登录系统用户的密码。
+        read only
+
+        $git clone git://github.com/flyingbird1221/gerrit-trigger-plugin.git
+
+ + git 分支
+        git clone -b <branch> <remote_repo>
+        Example:
+        git clone -b my-branch git@github.com:user/myproject.git
+        Alternative (no public key setup needed):
+        git clone -b my-branch https://git@github.com/username/myproject.git
+        With Git 1.7.10 and later, add --single-branch to prevent fetching of all
+        branches. Example, with OpenCV 2.4 branch:
+        git clone -b 2.4 --single-branch https://github.com/Itseez/opencv.git opencv-2.4  
++ 今天用git :
+   1、文件需要添加的太多了，用git add -i进入一个shell模式，注意[[http://www.cnblogs.com/mengdd/archive/2013/04/11/3013843.html][git add -i]]  选择用1-xxx，选完后回车退出
+   2、还有一个git commit -a
+   3、后来发现改乱了，出现双方修改,用命令git reset --hard ORIGIN/BRANCH 搞定
+   4、看分支 git branch 看所有的 git branch -a
 *** 分支 :
  + 创建分支 : git branch branchname
  + 切换分支 : git checkout branchname (相当于把HEAD指针指向新分支)
@@ -174,7 +208,8 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 [[~/下载/OpenERP Server Developers Documentatio中英对照--完整.pdf][开发中英对照]]
 **** frepple可以实现排程,还有APS即Advanced Planning and Scheduling
 ** 英语
-*** TODO 背单词 <2015-07-29 三 +1d>
+*** TODO 背单词 <2015-07-30 四 +1d>
+- State "DONE"       from "TODO"       [2015-08-01 六 21:20]
 - State "DONE"       from "TODO"       [2015-07-30 四 21:52]
 - State "DONE"       from "TODO"       [2015-07-29 三 21:08]
 - State "DONE"       from "TODO"       [2015-07-29 三 21:08]
@@ -183,7 +218,7 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 - State "DONE"       from "TODO"       [2015-07-23 四 19:41]
 - State "DONE"       from "TODO"       [2015-07-22 三 19:55]
 :PROPERTIES:
-:LAST_REPEAT: [2015-07-30 四 21:52]
+:LAST_REPEAT: [2015-08-01 六 21:20]
 :END:
 * machinglearning
 *** adaboost
@@ -358,13 +393,19 @@ Start Date（date_start）：实际的生产开工时间。
 End Date（date_end）：实际的生产完工时间。
 ****  Odoo中安装website模块后，登录界面找不到"数据库管理"(Manage Databases)链接，可通过此链接进入数据库管理界面:
 http://localhost:8069/web/database/manager PS:数据库选择界面url
-http://localhost:8069/web/database/selector带db信息的登录界面url
+http://localhost:8069/web/database/selector 带db信息的登录界面url
 http://localhost:8069/web/login?db=odoo
 **** [[http://fr.slideshare.net/openmrp/fabricac-27781655][ 生产中的价值计算]]
 **** [[https://doc.odoo.com/v6.1/book/5/5_15_Manufacturing/5_15_Manufacturing_forecasting][提供和预期]]
 **** [[http://fr.slideshare.net/alrayon/atlantis-ibim-open-erp-for-production-planning][openerp for production planning]]  这里面的功能有很多找不到
 **** [[https://aasimania.wordpress.com/2015/02/23/manufacturing-order-and-costing-in-openerpodoo/][Manufacturing Order and Costing in OpenERP/Odoo]]
 **** bill of materials 中的rounding是指一个产品最小表示单位，如是一个东西还是半个东西。
-
+**** 在manufacturing order中的total hours 是在routings中的各个work centersn中的
+时间得来的，可以在work orders by resource里看到产生每个工单里每个具体work centers的时间，周期数也是一样，注意在
+work centers 中定义的准备时间和结束时间不是指每个cycle，而是整个生产过程。如果在routings中定义了number of hours
+则最后的total hours在前面算出来的基础上还要加上它*cycle. 
+****  areoo reports 下载得很多
+**** [[http://blog.sina.com.cn/s/blog_7cb52fa80101lflr.html][odoo权限设置]]
+**** [[http://blog.sina.com.cn/s/blog_7cb52fa80100zukj.html][启动多个实例子]]
 ** 家庭
 ** 学习
