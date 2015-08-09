@@ -21,6 +21,7 @@
 + c-c c-d 任务截止时间
 + c-c . or c-c < 输入日期
 + c-c >日历
++ c-c c org-capture-templates
 + 图片插入 file:     插入链接 c-c c-o 打开链接
 + 插入列表 直接输入表头“|Name|Pone|Age”后，c-c ret生成表格 c-c c-c 自动对齐表格
 + tag c-c c-q 文本插入tag
@@ -38,7 +39,15 @@
 用“|”分隔未完成状态和已完成状态。未完成状态在查询待办事项时会列出。 
 + c-c a t 全局todo列表
 + 用复选框标记非标题类型的子任务
-
++ 记笔记 org-capture命令 下面设置了笔记的模板及存放位置
+ (setq org-default-notes-file (concat org-directory "~/doc/notes.org"))
+(setq org-capture-templates
+      '(("l" "灵感" entry (file+headline "~/doc/创意.org" "创意")
+         "* %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/doc/journal.org")
+         "* %?\n输入于： %U\n  %i\n  %a")
+        ("o" "Odoo相关" entry (file+headline "~/doc/odoo.org" "odoo")
+ 
 前面的任务和子任务都是标题形式。Org-mode还支持非标题形式的子任务。对于以”[ ]“开头的列表， 会被当作复选框。这样就形成了局部的子任务， 适用于将一个任务划分成几个简单的步骤。 下面是一个例子：
 
 **** 一个任务 [0/2]
@@ -53,7 +62,8 @@
 与子任务类似，步骤的状态变化会改变上级步骤/任务的完成情况。 下面是复选框相关的命令：
   KEYS	COMMENT
 C-c C-c 	改变复选框状态
-M-S-RET 	增加一个子项
+M-S-RET 	增加一个子项   
+
 *** 补全
    alt+/
 *** 状态切换:c+z 可以让minibuffer上有eval
