@@ -68,7 +68,8 @@ M-S-RET 	增加一个子项
 *** 补全
    alt+/
 *** 状态切换:c+z 可以让minibuffer上有eval
-*** m-q 段落重排
+*** m-q 段落重排 
+*** spacemacs视频 [[http://v.youku.com/v_show/id_XMTI1NzQxMzkzNg==.html][子龙山人]]
 ** VI
 *** 屏幕
  ：splite or new 
@@ -218,8 +219,11 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 [[file:/home/whcy/下载/精通Odoo.pdf][精通odoo]]
 [[~/下载/OpenERP Server Developers Documentatio中英对照--完整.pdf][开发中英对照]]
 **** frepple可以实现排程,还有APS即Advanced Planning and Scheduling
+*** 测试用的
+输入于: [2015-08-10 一 15:07]
 ** 英语
-*** TODO 背单词 <2015-07-30 四 +1d>
+*** TODO 背单词 <2015-07-31 五 +1d>
+- State "DONE"       from "TODO"       [2015-08-12 三 19:54]
 - State "DONE"       from "TODO"       [2015-08-01 六 21:20]
 - State "DONE"       from "TODO"       [2015-07-30 四 21:52]
 - State "DONE"       from "TODO"       [2015-07-29 三 21:08]
@@ -229,7 +233,7 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 - State "DONE"       from "TODO"       [2015-07-23 四 19:41]
 - State "DONE"       from "TODO"       [2015-07-22 三 19:55]
 :PROPERTIES:
-:LAST_REPEAT: [2015-08-01 六 21:20]
+:LAST_REPEAT: [2015-08-12 三 19:54]
 :END:
 * machinglearning
 *** adaboost
@@ -420,3 +424,36 @@ work centers 中定义的准备时间和结束时间不是指每个cycle，而�
 **** [[http://blog.sina.com.cn/s/blog_7cb52fa80100zukj.html][启动多个实例子]]
 ** 家庭
 ** 学习
+* python
+** 装饰器
+*** 装饰器 保证了函数的属性名字仍为原函数 
+输入于: [2015-08-12 三 10:46]
+  
+[[file:~/prj/python/test/decorator.py::@functools.wraps(func)]]
+*** 带参数的函数进行装饰
+输入于: [2015-08-12 三 16:08]
+  
+  [[file:~/prj/python/test/decorator.py::def%20deco2(func):][file:~/prj/python/test/decorator.py::def deco2(func):]]
+*** 不定参数的函数进行装饰
+输入于: [2015-08-12 三 16:09]
+  
+  [[file:~/prj/python/test/decorator.py::def%20deco3(func):][file:~/prj/python/test/decorator.py::def deco3(func):]]
+*** 装饰器带参数，有三层嵌套
+输入于: [2015-08-12 三 17:30]
+  
+  [[file:~/prj/python/test/decorator.py]]
+*** 装饰器带类参数
+输入于: [2015-08-12 三 17:31]
+  
+  [[file:~/prj/python/test/decorator.py ]]
+***  [[http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0014186131194415d50558b7a1c424f9fb52b84dc9c965c000][闭包]]
+*** 复杂的
+输入于: [2015-08-12 三 17:37]
+  
+  [[file:~/prj/python/test/decorator.py::#%20-*-%20coding:gbk%20-*-][file:~/prj/python/test/decorator.py::# -*- coding:gbk -*-]]
+* Tasks
+** TODO  odoodev
+输入于: 
+  [[file:~/prj/python/test/decorator.py::class%20mylocker:][file:~/prj/python/test/decorator.py::class mylocker:]]
+
+* ideas
