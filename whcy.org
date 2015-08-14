@@ -70,6 +70,9 @@ M-S-RET 	增加一个子项
 *** 状态切换:c+z 可以让minibuffer上有eval
 *** m-q 段落重排 
 *** spacemacs视频 [[http://v.youku.com/v_show/id_XMTI1NzQxMzkzNg==.html][子龙山人]]
+*** space +f+e+l 列出layer
+*** space+t+r ，space+t+n 列出行号
+*** space+s+l 列出函数 
 ** VI
 *** 屏幕
  ：splite or new 
