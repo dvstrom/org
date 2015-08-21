@@ -425,6 +425,7 @@ work centers 中定义的准备时间和结束时间不是指每个cycle，而�
 ****  areoo reports 下载得很多
 **** [[http://blog.sina.com.cn/s/blog_7cb52fa80101lflr.html][odoo权限设置]]
 **** [[http://blog.sina.com.cn/s/blog_7cb52fa80100zukj.html][启动多个实例子]]
+**** [[http://blog.csdn.net/saloon_yuan/article/details/7904496][Fedora下安装postgresql]]
 ** 家庭
 ** 学习
 * python
