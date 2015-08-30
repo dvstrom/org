@@ -224,6 +224,18 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 **** frepple可以实现排程,还有APS即Advanced Planning and Scheduling
 *** 测试用的
 输入于: [2015-08-10 一 15:07]
+*** 
+输入于: [2015-08-25 二 12:35]
+  
+  [[file:~/doc/org/whcy.org::*org][org]]
+**** [[http://www.linuxidc.com/Linux/2015-06/118497.htm][centos 安装odoo]]
+输入于: [2015-08-26 三 13:35]
+  
+  [[file:~/doc/org/whcy.org::*%E8%BF%9C%E7%A8%8B][远程]]
+**** [[http://infotechmanagefactory.com/zh_HK/steps-install-odoo-ver8-fedora20/][fedora安装odoo]]
+输入于: [2015-08-26 三 13:42]
+  
+  [[file:~/doc/org/whcy.org::*]]
 ** 英语
 *** TODO 背单词 <2015-07-31 五 +1d>
 - State "DONE"       from "TODO"       [2015-08-12 三 19:54]
