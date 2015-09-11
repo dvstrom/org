@@ -156,7 +156,7 @@ Ctrl+Shift+Z    从放大至全屏的某一窗口回到多窗格界面
  + 合并分支: 切换回主分支后,git merge branchname
  + 删除分支 :git branch -d branchname 
 * TODO 日程
-** odoo 
+** odoo 安排
 *** TODO 会计管理
     - State "TODO"       from "STARTED"    [2015-06-18 Thu 08:40]
     - State "STARTED"    from "DONE"       [2015-06-18 Thu 08:40]
@@ -185,71 +185,7 @@ CLOSED: [2015-07-26 日 21:51] SCHEDULED: <2015-07-25 六>
 *** TODO 生产成本核算
 DEADLINE: <2015-07-24 五> SCHEDULED: <2015-07-23 四>
 *** TODO 安装客户端
-*** TODO 库存和生产文档阅读  [5/9]                                 :odoo应用:
-SCHEDULED: <2015-07-28 二 +1d>-<2015-07-27 一>
-- State "DONE"       from "TODO"       [2015-07-30 四 21:48]
-- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
-- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
-- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
-- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
-:PROPERTIES:
-:LAST_REPEAT: [2015-07-30 四 21:48]
-:END:
-- [-]读 [[file:~/下载/OpenERPWMS.pdf][odoo仓库管理的英文文档]] [1/3]
-  - [X] 1-10
-
-  - [ ] 10-30
-
-  - [ ] 30-54
-
-   
-
-- [X] [[http://shine-it.net/index.php/topic,2425.msg8078.html][openerp仓库基本概念]]
-- [X] [[http://shine-it.net/index.php?topic=16496.0][Odoo8仓库管理（WMS）介绍]]
-- [X] [[http://blog.csdn.net/wangnan537/article/details/41335359][Odoo(OpenERP)补货规则笔记整理 - 草稿  ]]
-- [X] [[http://www.osbzr.com/help.php?page=mrp][生产]]
-- [ ] [[~/下载/openerp_manufacturing_book.pdf][英文生产手册]]
-- [ ] [[https://doc.odoo.com/book/5/5_15_Manufacturing/5_15_Manufacturing/#finished-product-manufacturing][网上文档生产]]
-- [X] [[http://blog.sina.com.cn/s/blog_7cb52fa80100wr6n.html][用会计的思想来解释ODOO的库存]]
-- [ ] [[http://www.haodaima.net/art/2711002][新odoo不同的地方]]
-- [ ] 有Scheduler的，odoo老文档
-      [[https://doc.odoo.com/v6.1/book/5/5_15_Manufacturing/5_15_Manufacturing_forecasting][关于计划的]] 
 *** TODO 看开发教程                                                :odoo开发:
-**** 
-DEADLINE: <2015-07-30 四> SCHEDULED: <2015-07-24 五 >
-http://www.openerp-china.org/index.php?page=developer#Odoo%2528%25E5%2589%258DOpenERP%2529%252C%25E4%25B8%2580%25E4%25B8%25AA%25E4%25BC%2598%25E7%25A7%2580%25E7%259A%2584ERP%25E4%25BA%258C%25E6%25AC%25A1%25E5%25BC%2580%25E5%258F%2591%25E5%25B9%25B3%25E5%258F%25B0
-SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
-[[file:/home/whcy/下载/精通Odoo.pdf][精通odoo]]
-[[~/下载/OpenERP Server Developers Documentatio中英对照--完整.pdf][开发中英对照]]
-**** frepple可以实现排程,还有APS即Advanced Planning and Scheduling
-*** 测试用的
-输入于: [2015-08-10 一 15:07]
-*** 
-输入于: [2015-08-25 二 12:35]
-  
-  [[file:~/doc/org/whcy.org::*org][org]]
-**** [[http://www.linuxidc.com/Linux/2015-06/118497.htm][centos 安装odoo]]
-输入于: [2015-08-26 三 13:35]
-  
-  [[file:~/doc/org/whcy.org::*%E8%BF%9C%E7%A8%8B][远程]]
-**** [[http://infotechmanagefactory.com/zh_HK/steps-install-odoo-ver8-fedora20/][fedora安装odoo]]
-输入于: [2015-08-26 三 13:42]
-  
-  [[file:~/doc/org/whcy.org::*]]
-** 英语
-*** TODO 背单词 <2015-07-31 五 +1d>
-- State "DONE"       from "TODO"       [2015-08-12 三 19:54]
-- State "DONE"       from "TODO"       [2015-08-01 六 21:20]
-- State "DONE"       from "TODO"       [2015-07-30 四 21:52]
-- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
-- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
-- State "DONE"       from "TODO"       [2015-07-26 日 20:59]
-- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
-- State "DONE"       from "TODO"       [2015-07-23 四 19:41]
-- State "DONE"       from "TODO"       [2015-07-22 三 19:55]
-:PROPERTIES:
-:LAST_REPEAT: [2015-08-12 三 19:54]
-:END:
 * machinglearning
 *** adaboost
 **** DONE 马群预测 
@@ -438,6 +374,79 @@ work centers 中定义的准备时间和结束时间不是指每个cycle，而�
 **** [[http://blog.sina.com.cn/s/blog_7cb52fa80101lflr.html][odoo权限设置]]
 **** [[http://blog.sina.com.cn/s/blog_7cb52fa80100zukj.html][启动多个实例子]]
 **** [[http://blog.csdn.net/saloon_yuan/article/details/7904496][Fedora下安装postgresql]]
+**** TODO 库存和生产文档阅读  [5/9]                               :odoo应用:
+SCHEDULED: <2015-07-28 二 +1d>-<2015-07-27 一>
+- State "DONE"       from "TODO"       [2015-07-30 四 21:48]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:47]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
+:PROPERTIES:
+:LAST_REPEAT: [2015-07-30 四 21:48]
+:END:
+- [-]读 [[file:~/下载/OpenERPWMS.pdf][odoo仓库管理的英文文档]] [1/3]
+  - [X] 1-10
+
+  - [ ] 10-30
+
+  - [ ] 30-54
+
+   
+
+- [X] [[http://shine-it.net/index.php/topic,2425.msg8078.html][openerp仓库基本概念]]
+- [X] [[http://shine-it.net/index.php?topic=16496.0][Odoo8仓库管理（WMS）介绍]]
+- [X] [[http://blog.csdn.net/wangnan537/article/details/41335359][Odoo(OpenERP)补货规则笔记整理 - 草稿  ]]
+- [X] [[http://www.osbzr.com/help.php?page=mrp][生产]]
+- [ ] [[~/下载/openerp_manufacturing_book.pdf][英文生产手册]]
+- [ ] [[https://doc.odoo.com/book/5/5_15_Manufacturing/5_15_Manufacturing/#finished-product-manufacturing][网上文档生产]]
+- [X] [[http://blog.sina.com.cn/s/blog_7cb52fa80100wr6n.html][用会计的思想来解释ODOO的库存]]
+- [ ] [[http://www.haodaima.net/art/2711002][新odoo不同的地方]]
+- [ ] 有Scheduler的，odoo老文档
+      [[https://doc.odoo.com/v6.1/book/5/5_15_Manufacturing/5_15_Manufacturing_forecasting][关于计划的]] 
+****** 
+DEADLINE: <2015-07-30 四> SCHEDULED: <2015-07-24 五 >
+http://www.openerp-china.org/index.php?page=developer#Odoo%2528%25E5%2589%258DOpenERP%2529%252C%25E4%25B8%2580%25E4%25B8%25AA%25E4%25BC%2598%25E7%25A7%2580%25E7%259A%2584ERP%25E4%25BA%258C%25E6%25AC%25A1%25E5%25BC%2580%25E5%258F%2591%25E5%25B9%25B3%25E5%258F%25B0
+SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
+[[file:/home/whcy/下载/精通Odoo.pdf][精通odoo]]
+[[~/下载/OpenERP Server Developers Documentatio中英对照--完整.pdf][开发中英对照]]
+******* frepple可以实现排程,还有APS即Advanced Planning and Scheduling
+****** 测试用的
+输入于: [2015-08-10 一 15:07]
+****** 
+输入于: [2015-08-25 二 12:35]
+  
+  [[file:~/doc/org/whcy.org::*org][org]]
+******* [[http://www.linuxidc.com/Linux/2015-06/118497.htm][centos 安装odoo]]
+输入于: [2015-08-26 三 13:35]
+  
+  [[file:~/doc/org/whcy.org::*%E8%BF%9C%E7%A8%8B][远程]]
+******* [[http://infotechmanagefactory.com/zh_HK/steps-install-odoo-ver8-fedora20/][fedora安装odoo]]
+输入于: [2015-08-26 三 13:42]
+  
+  [[file:~/doc/org/whcy.org::*]]
+****** [[http://xiaolin0199.iteye.com/blog/2034361][openerp视图基础]]
+
+输入于: [2015-09-01 二 15:26]
+  
+[[file:~/prj/odoodev/odoo/addons/mymodule/views/mymodule.xml::<!--%20</data>%20-->][file:~/prj/odoodev/odoo/addons/mymodule/views/mymodule.xml::<!-- </data> -->]]
+***** 英语
+****** TODO 背单词 <2015-07-31 五 +1d>
+- State "DONE"       from "TODO"       [2015-08-12 三 19:54]
+- State "DONE"       from "TODO"       [2015-08-01 六 21:20]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:52]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-26 日 20:59]
+- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
+- State "DONE"       from "TODO"       [2015-07-23 四 19:41]
+- State "DONE"       from "TODO"       [2015-07-22 三 19:55]
+:PROPERTIES:
+:LAST_REPEAT: [2015-08-12 三 19:54]
+:END:
+****  [[http://www.mindissoftware.com/2014/08/31/odoo-addon-open-academy-step2/][build openacademy]]
+输入于: [2015-09-08 二 16:03]
+  
+  [[file:~/prj/odoodev/odoo/addons/mymodule/course.py::#%20'seats':%20fields.integer(string%3D"Number%20of%20seats"),][file:~/prj/odoodev/odoo/addons/mymodule/course.py::# 'seats': fields.integer(string="Number of seats"),]]
 ** 家庭
 ** 学习
 * python
@@ -467,9 +476,11 @@ work centers 中定义的准备时间和结束时间不是指每个cycle，而�
 输入于: [2015-08-12 三 17:37]
   
   [[file:~/prj/python/test/decorator.py::#%20-*-%20coding:gbk%20-*-][file:~/prj/python/test/decorator.py::# -*- coding:gbk -*-]]
+** [[http://bokeh.pydata.org/en/latest/docs/quickstart.html][pyhon数据可视化包]]                                                 
+[[http://top.jobbole.com/24216/][数据收集视频教程]]
+输入于: [2015-09-11 五 08:41]
 * Tasks
 ** TODO  odoodev
 输入于: 
   [[file:~/prj/python/test/decorator.py::class%20mylocker:][file:~/prj/python/test/decorator.py::class mylocker:]]
-
 * ideas
