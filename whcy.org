@@ -50,6 +50,14 @@
  
 + 用复选框标记非标题类型的子任务
 前面的任务和子任务都是标题形式。Org-mode还支持非标题形式的子任务。对于以”[ ]“开头的列表， 会被当作复选框。这样就形成了局部的子任务， 适用于将一个任务划分成几个简单的步骤。 下面是一个例子：
++  
+   1. Move point to a task as you would do with org-clock-in. Call org-pomodoro
+   the task will be clocked-in.
+   2. When there's time for break, the task will be  org-clock-out'ed
+   3. If you call org-pomodoro during a pomodoro, you'll be asked
+   to reset a pomodoro.
+   4. If you call org-pomodoro outside org-mode, you'll be
+   presented with list of recent tasks, as C-u org-clock-in would.
 
 **** 一个任务 [0/2]
 该任务包含几个步骤：
@@ -447,6 +455,8 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 输入于: [2015-09-08 二 16:03]
   
   [[file:~/prj/odoodev/odoo/addons/mymodule/course.py::#%20'seats':%20fields.integer(string%3D"Number%20of%20seats"),][file:~/prj/odoodev/odoo/addons/mymodule/course.py::# 'seats': fields.integer(string="Number of seats"),]]
+**** [[http://www.jointd.com/?p=1085][odoo激活客户门户]]
+输入于: [2015-09-12 六 16:00]
 ** 家庭
 ** 学习
 * python
@@ -481,6 +491,15 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 输入于: [2015-09-11 五 08:41]
 * Tasks
 ** TODO  odoodev
+CLOCK: [2015-09-12 六 16:46]
+CLOCK: [2015-09-12 六 16:46]--[2015-09-12 六 16:46] =>  0:00
 输入于: 
   [[file:~/prj/python/test/decorator.py::class%20mylocker:][file:~/prj/python/test/decorator.py::class mylocker:]]
 * ideas
+* 2015
+** 2015-09 九月
+*** 2015-09-12 星期六                                         :twister key:
+****  twister 密钥 Your secret key is: KymsEWykmyHRGdj26MA6RZb98e5ux5zhhscgqqZcY5disfCCvPDR
+输入于： [2015-09-12 六 16:54]
+  
+  [[file:~/doc/whcy.org::*ideas][ideas]]
