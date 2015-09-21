@@ -72,7 +72,8 @@
   KEYS	COMMENT
 C-c C-c 	改变复选框状态
 M-S-RET 	增加一个子项   
-
+ 
+**** 导出 c--c c-e  移动子项到另个节点 c-c c-w
 *** 补全
    alt+/
 *** 状态切换:c+z 可以让minibuffer上有eval
@@ -194,6 +195,20 @@ CLOSED: [2015-07-26 日 21:51] SCHEDULED: <2015-07-25 六>
 DEADLINE: <2015-07-24 五> SCHEDULED: <2015-07-23 四>
 *** TODO 安装客户端
 *** TODO 看开发教程                                                :odoo开发:
+** 英语
+*** TODO 背单词 <2015-07-31 五 +1d>
+- State "DONE"       from "TODO"       [2015-08-12 三 19:54]
+- State "DONE"       from "TODO"       [2015-08-01 六 21:20]
+- State "DONE"       from "TODO"       [2015-07-30 四 21:52]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
+- State "DONE"       from "TODO"       [2015-07-26 日 20:59]
+- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
+- State "DONE"       from "TODO"       [2015-07-23 四 19:41]
+- State "DONE"       from "TODO"       [2015-07-22 三 19:55]
+:PROPERTIES:
+:LAST_REPEAT: [2015-08-12 三 19:54]
+:END:
 * machinglearning
 *** adaboost
 **** DONE 马群预测 
@@ -437,28 +452,30 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 输入于: [2015-09-01 二 15:26]
   
 [[file:~/prj/odoodev/odoo/addons/mymodule/views/mymodule.xml::<!--%20</data>%20-->][file:~/prj/odoodev/odoo/addons/mymodule/views/mymodule.xml::<!-- </data> -->]]
-***** 英语
-****** TODO 背单词 <2015-07-31 五 +1d>
-- State "DONE"       from "TODO"       [2015-08-12 三 19:54]
-- State "DONE"       from "TODO"       [2015-08-01 六 21:20]
-- State "DONE"       from "TODO"       [2015-07-30 四 21:52]
-- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
-- State "DONE"       from "TODO"       [2015-07-29 三 21:08]
-- State "DONE"       from "TODO"       [2015-07-26 日 20:59]
-- State "DONE"       from "TODO"       [2015-07-24 五 20:09]
-- State "DONE"       from "TODO"       [2015-07-23 四 19:41]
-- State "DONE"       from "TODO"       [2015-07-22 三 19:55]
-:PROPERTIES:
-:LAST_REPEAT: [2015-08-12 三 19:54]
-:END:
 ****  [[http://www.mindissoftware.com/2014/08/31/odoo-addon-open-academy-step2/][build openacademy]]
 输入于: [2015-09-08 二 16:03]
   
   [[file:~/prj/odoodev/odoo/addons/mymodule/course.py::#%20'seats':%20fields.integer(string%3D"Number%20of%20seats"),][file:~/prj/odoodev/odoo/addons/mymodule/course.py::# 'seats': fields.integer(string="Number of seats"),]]
 **** [[http://www.jointd.com/?p=1085][odoo激活客户门户]]
 输入于: [2015-09-12 六 16:00]
-** 家庭
-** 学习
+[[https://github.com/buke/openerp-taobao][odoo开源淘宝]]
+   [[https://github.com/odoo-cn/payment][odoo国内各种支付方式代码]]
+输入于: [2015-09-14 一]
+[[file:~/doc/whcy.org::*odoodev][odoodev]]
+****  saas相关
+[[http://www.odooerp.com.au/openerp-saas-model/][openerp云图]]
+[[http://www.odoo.yenthevg.com/install-odoo-8-on-ubuntu-14-04/][ubuntu安装odoo脚本]]
+[[http://www.mindissoftware.com/2014/08/23/Install-Odoo-V8-from-script/][odoo的docker]]
+输入于: [2015-09-18 五 10:43]
+****  今天装了odoo的docker版本 有两个问题解决了
+  - 一个OSError: [Errno 13] Permission denied: '/opt/odoo/.local'问题
+     Your odoo config file (commonly at /etc/odoo-server.conf) should have a line like USER=odoo
+    [[http://stackoverflow.com/questions/30202445/odoo-doesnt-restart-after-update][网上解释]]
+  - ConfigParser.MissingSectionHeaderError: File contains no section headers.
+    在/etc/odoo-server.conf 最前面加上[options]
+输入于: [2015-09-21 一 10:43]
+  
+  [[file:/etc/odoo-server.conf::logfile%20=%20/var/log/odoo/odoo-server2.log]]
 * python
 ** 装饰器
 *** 装饰器 保证了函数的属性名字仍为原函数 
@@ -493,8 +510,6 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 ** TODO  odoodev
 CLOCK: [2015-09-12 六 16:46]
 CLOCK: [2015-09-12 六 16:46]--[2015-09-12 六 16:46] =>  0:00
-输入于: 
-  [[file:~/prj/python/test/decorator.py::class%20mylocker:][file:~/prj/python/test/decorator.py::class mylocker:]]
 * ideas
 * 2015
 ** 2015-09 九月
