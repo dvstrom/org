@@ -466,7 +466,8 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 [[http://www.odooerp.com.au/openerp-saas-model/][openerp云图]]
 [[http://www.odoo.yenthevg.com/install-odoo-8-on-ubuntu-14-04/][ubuntu安装odoo脚本]]
 [[http://www.mindissoftware.com/2014/08/23/Install-Odoo-V8-from-script/][odoo的docker]]
-输入于: [2015-09-18 五 10:43]
+[[http://pragtechblog.blogspot.com/2013/06/openerp-7-saaskit.html][openerp云图2]]
+**** 输入于: [2015-09-18 五 10:43]
 ****  今天装了odoo的docker版本 有两个问题解决了
   - 一个OSError: [Errno 13] Permission denied: '/opt/odoo/.local'问题
      Your odoo config file (commonly at /etc/odoo-server.conf) should have a line like USER=odoo
@@ -476,6 +477,23 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 输入于: [2015-09-21 一 10:43]
   
   [[file:/etc/odoo-server.conf::logfile%20=%20/var/log/odoo/odoo-server2.log]]
+****  电梯卫士里的内容对odoo的商业计划书有用
+输入于: [2015-09-24 四 10:58]
+  
+  [[file:~/doc/thermometer.org::*%E7%BA%BF%E4%B8%8B%E4%B8%8E%E8%8D%AF%E5%BA%97%E5%90%88%E4%BD%9C%E6%8E%A8%E5%B9%BF][线下与药店合作推广]]
+**** [[http://shine-it.net/index.php/topic,14517.0.html][openerp-server.conf 中配置 dbfilter 参数无效的解决办法]]
+输入于: [2015-10-01 四 10:49]
+  
+  [[file:~/prj/odoodev/odoo/debian/openerp-server.conf::addons_path%20%3D%20/home/whcy/prj/odoodev/odoo/addons,/home/whcy/prj/odoodev/custom/addons][file:~/prj/odoodev/odoo/debian/openerp-server.conf::addons_path = /home/whcy/prj/odoodev/odoo/addons,/home/whcy/prj/odoodev/custom/addons]]
+**** [[http://blog.csdn.net/wangnan537/article/details/42283465][Odoo(OpenERP)配置文件openerp-server.conf详解 ]]
+[[http://blog.csdn.net/wangnan537/article/details/44229369][Odoo(OpenERP)应用实践: 使用db-filter参数实现通过域名指定访问哪个数据库 ]]
+输入于: [2015-10-01 四 10:50]
+  
+  [[file:~/prj/odoodev/odoo/debian/openerp-server.conf]]
+****  [[http://blog.csdn.net/wangnan537/article/details/48162995][odoo官方资源]]
+输入于: [2015-10-01 四 10:55]
+  
+  [[file:~/prj/odoodev/odoo/debian/openerp-server.conf::db_filter%20%3D%20^%25h$][file:~/prj/odoodev/odoo/debian/openerp-server.conf::db_filter = ^%h$]]
 * python
 ** 装饰器
 *** 装饰器 保证了函数的属性名字仍为原函数 
@@ -510,6 +528,7 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 ** TODO  odoodev
 CLOCK: [2015-09-12 六 16:46]
 CLOCK: [2015-09-12 六 16:46]--[2015-09-12 六 16:46] =>  0:00
+
 * ideas
 * 2015
 ** 2015-09 九月
@@ -518,3 +537,7 @@ CLOCK: [2015-09-12 六 16:46]--[2015-09-12 六 16:46] =>  0:00
 输入于： [2015-09-12 六 16:54]
   
   [[file:~/doc/whcy.org::*ideas][ideas]]
+** 2015-10 十月
+*** 2015-10-10 星期六
+****  飞鹰ip:192.168.0.144 dns:202.103.44.150
+输入于： [2015-10-10 六 09:14]
