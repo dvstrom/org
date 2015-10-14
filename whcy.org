@@ -494,6 +494,45 @@ SCHEDULED: <2015-07-23 四>-<2015-07-29 三>
 输入于: [2015-10-01 四 10:55]
   
   [[file:~/prj/odoodev/odoo/debian/openerp-server.conf::db_filter%20%3D%20^%25h$][file:~/prj/odoodev/odoo/debian/openerp-server.conf::db_filter = ^%h$]]
+****  配置nginx
+[[http://www.octoc.com/forum.php?mod=viewthread&action=printable&tid=100][openerp nginx wsgi中文]]
+[[http://blog.sina.com.cn/s/blog_7cb52fa80101mv6e.html][中文]]
+[[blog.sina.com.cn/s/blog_7cb52fa80101mv6e.html][问题解决]]
+[[http://www.tuicool.com/articles/BVnMfyB][英文]]
+[[http://www.tuicool.com/articles/jIjamm][英文2]]
+[[http://shine-it.net/index.php/topic,7293.0.html][centos]]
+[[http://my.oschina.net/wangbuke/blog/67450][	使用Nginx Upstream 部署 OpenERP]] bb
+输入于: [2015-10-10 六 16:06]
+****  proxy_pass  don't need port in this file; today i have a port first ,but wrong
+输入于: [2015-10-12 一 15:15]
+  
+  [[file:/etc/nginx/sites-available/odoo.local::proxy_pass%20http://s1.odoo.local%3B][file:/etc/nginx/sites-available/odoo.local::proxy_pass http://s1.odoo.local;]]
+****  配置odoo-saas-tools 的nginx 配置
+upstream localhost{
+     #listen 80;
+     server localhost:8069;
+ }
+server {  
+    listen 80;  
+    server_name odoo.local; # 主机名，可以随便填，如果有机器域名就填完整域名  
+    # root /home/whcy/prj/odoodev/odoo/addons;
+    client_max_body_size 50M;  
+    keepalive_timeout 120;  
+
+    location / {   
+      proxy_redirect off;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_pass http://localhost;
+    # include uwsgi_params;  
+    # uwsgi_read_timeout 300;  
+    # uwsgi_pass unix:/srv/openerp/uwsgi.sock;  
+     }
+ }
+输入于: [2015-10-14 三 14:32]
+
 * python
 ** 装饰器
 *** 装饰器 保证了函数的属性名字仍为原函数 
